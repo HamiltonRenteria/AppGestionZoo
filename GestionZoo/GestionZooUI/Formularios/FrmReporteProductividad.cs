@@ -66,7 +66,7 @@ namespace GestionZooUI.Formularios
             if (reporte != null && reporte.Count > 0) 
             {
                 dgvReporte.DataSource = null;
-                dgvReporte.DataSource = _reporteService.GenerarReporteGeneral();
+                dgvReporte.DataSource = reporte;
             }
             else
             {
@@ -84,8 +84,7 @@ namespace GestionZooUI.Formularios
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var datos = ObtenerDatosDelDataGridView();
-                _reporteService.ExportarReporteJSON(saveFileDialog.FileName, datos);
+                _reporteService.ExportarReporteJSON(saveFileDialog.FileName);
                 _ = MessageBox.Show("Reporte exportado exitosamente.");
             }
         }
@@ -118,6 +117,11 @@ namespace GestionZooUI.Formularios
             _ = reportes.Columns.Add("Total Tareas", Type.GetType("System.Int32"));
             _ = reportes.Columns.Add("Tiempo Total (minutos)", Type.GetType("System.Int32"));
             dgvReporte.DataSource = reportes;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GenerarReporte();
         }
     }
 }

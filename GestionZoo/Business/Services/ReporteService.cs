@@ -29,9 +29,10 @@ namespace Business.Services
             return _reporteProductividad.TotalTareasCompletadas();
         }
 
-        public void ExportarReporteJSON(string rutaArchivo, object datos)
+        public void ExportarReporteJSON(string rutaArchivo)
         {
-            string jsonData = JsonSerializer.Serialize(datos, new JsonSerializerOptions { WriteIndented = true });
+            var tareasAgrupadas = GenerarReporteGeneral();
+            string jsonData = JsonSerializer.Serialize(tareasAgrupadas, new JsonSerializerOptions { WriteIndented = true });
             System.IO.File.WriteAllText(rutaArchivo, jsonData);
             Console.WriteLine($"Reporte exportado exitosamente en {rutaArchivo}");
         }

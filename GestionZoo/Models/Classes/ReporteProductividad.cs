@@ -46,7 +46,7 @@ namespace Models.Classes
                     Apellido = g.Key.Apellido,
                     Sector = g.Key.Sector,
                     TotalTareas = g.Count(),
-                    TotalTiempo = g.Sum(t => t.Duracion)
+                    TotalTiempo = Convert.ToInt32(g.Sum(t => t.Duracion))
                 })
                 .ToList<object>();
         }

@@ -24,6 +24,7 @@ namespace GestionZooUI.Formularios
             _tareaService = new TareaService();
             _errorProvider = new ErrorProvider();
             IniciarComboSectores();
+            ConfigurarDataGridView();
         }
 
         private void IniciarComboSectores()
@@ -156,8 +157,6 @@ namespace GestionZooUI.Formularios
         private void ActualizarDataGridEmpleados()
         {
             dgvEmpleados.DataSource = null;
-            dgvEmpleados.Rows.Clear();
-            ConfigurarDataGridView();
             dgvEmpleados.DataSource = _empleadoService.ObtenerEmpleados();
         }
 
@@ -261,14 +260,15 @@ namespace GestionZooUI.Formularios
 
         private void btnLimpiarEstanque_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -277,14 +277,15 @@ namespace GestionZooUI.Formularios
 
         private void btnAlimentarPeces_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -293,14 +294,15 @@ namespace GestionZooUI.Formularios
 
         private void btnLimpiarJaula_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -309,14 +311,15 @@ namespace GestionZooUI.Formularios
 
         private void btnAlimentarFelinos_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -325,14 +328,15 @@ namespace GestionZooUI.Formularios
 
         private void btnLiberarFelinos_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -341,14 +345,15 @@ namespace GestionZooUI.Formularios
 
         private void btnEnjaularFelinos_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
@@ -357,30 +362,32 @@ namespace GestionZooUI.Formularios
 
         private void btnLimpiarBebederos_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
-            }            
+            }
         }
 
         private void btnLimpiarPasillo_Click(object sender, EventArgs e)
         {
-            if (!_success)
+            if (!_success && _empleadoSelecionado != null)
             {
                 string nombreTarea = ((ButtonBase)sender).Text;
                 IniciarTarea(nombreTarea);
                 _success = true;
                 return;
             }
-            else
+            
+            if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
                 return;
