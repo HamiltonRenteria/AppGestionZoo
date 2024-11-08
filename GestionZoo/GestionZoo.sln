@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionZoo.Entidad", "GestionZoo.Entidad\GestionZoo.Entidad.csproj", "{ACAAFFB2-019D-4052-B916-D4537EEE3C9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{1E87E8AB-13E9-42F0-956B-6D10845B35D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionZoo.Datos", "GestionZoo.Datos\GestionZoo.Datos.csproj", "{1783C8F2-B0D2-4628-A378-91DCDD5F712C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{B8B9F965-E4E7-4BF4-9335-9B5B598607F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionZoo.Negocio", "GestionZoo.Negocio\GestionZoo.Negocio.csproj", "{95FF5FE2-9D5C-4978-A48C-161BEB23297B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppGestionZoo", "AppGestionZoo\AppGestionZoo.csproj", "{82690DA1-85D7-460F-B78D-F595293A76CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionZooUI", "GestionZooUI\GestionZooUI.csproj", "{5A56D941-D070-4D50-946E-0E99EAA3DB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ACAAFFB2-019D-4052-B916-D4537EEE3C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACAAFFB2-019D-4052-B916-D4537EEE3C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACAAFFB2-019D-4052-B916-D4537EEE3C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACAAFFB2-019D-4052-B916-D4537EEE3C9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1783C8F2-B0D2-4628-A378-91DCDD5F712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1783C8F2-B0D2-4628-A378-91DCDD5F712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1783C8F2-B0D2-4628-A378-91DCDD5F712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1783C8F2-B0D2-4628-A378-91DCDD5F712C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95FF5FE2-9D5C-4978-A48C-161BEB23297B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95FF5FE2-9D5C-4978-A48C-161BEB23297B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95FF5FE2-9D5C-4978-A48C-161BEB23297B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95FF5FE2-9D5C-4978-A48C-161BEB23297B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82690DA1-85D7-460F-B78D-F595293A76CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82690DA1-85D7-460F-B78D-F595293A76CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82690DA1-85D7-460F-B78D-F595293A76CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82690DA1-85D7-460F-B78D-F595293A76CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E87E8AB-13E9-42F0-956B-6D10845B35D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E87E8AB-13E9-42F0-956B-6D10845B35D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E87E8AB-13E9-42F0-956B-6D10845B35D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E87E8AB-13E9-42F0-956B-6D10845B35D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B9F965-E4E7-4BF4-9335-9B5B598607F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B9F965-E4E7-4BF4-9335-9B5B598607F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B9F965-E4E7-4BF4-9335-9B5B598607F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B9F965-E4E7-4BF4-9335-9B5B598607F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A56D941-D070-4D50-946E-0E99EAA3DB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A56D941-D070-4D50-946E-0E99EAA3DB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A56D941-D070-4D50-946E-0E99EAA3DB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A56D941-D070-4D50-946E-0E99EAA3DB75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AA71AF0B-C992-4A3D-AD21-B74E91E86948}
+		SolutionGuid = {C1EA366F-9425-46F5-A73C-E94C474DC8B8}
 	EndGlobalSection
 EndGlobal
