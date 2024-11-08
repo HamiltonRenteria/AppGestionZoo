@@ -397,11 +397,13 @@ namespace GestionZooUI.Formularios
         private void IniciarTarea(string nombreTarea)
         {
             _tareaService.IniciarTarea(_empleadoSelecionado, nombreTarea);
+            _ = MessageBox.Show($"La tarea: {nombreTarea} ha sido iniciada.");
         }
 
         private void FinalizarTarea()
         {
             _tareaService.FinalizarTarea(_empleadoSelecionado);
+            _ = MessageBox.Show($"La tarea: {_empleadoSelecionado.NombreTarea} ha sido finalizada.");
         }
 
         private void FrmRegistroEmpleados_Load(object sender, EventArgs e)
