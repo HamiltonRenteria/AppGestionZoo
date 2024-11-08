@@ -31,7 +31,7 @@ namespace Business.Services
 
         public void ExportarReporteJSON(string rutaArchivo)
         {
-            var tareasAgrupadas = GenerarReporteGeneral();
+            List<object> tareasAgrupadas = GenerarReporteGeneral();
             string jsonData = JsonSerializer.Serialize(tareasAgrupadas, new JsonSerializerOptions { WriteIndented = true });
             System.IO.File.WriteAllText(rutaArchivo, jsonData);
             Console.WriteLine($"Reporte exportado exitosamente en {rutaArchivo}");

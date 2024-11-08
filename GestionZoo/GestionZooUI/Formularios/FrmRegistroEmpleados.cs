@@ -284,7 +284,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -301,7 +301,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -318,7 +318,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -335,7 +335,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -352,7 +352,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -369,7 +369,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();
@@ -386,7 +386,7 @@ namespace GestionZooUI.Formularios
                 _success = true;
                 return;
             }
-            
+
             if (_success && _empleadoSelecionado != null)
             {
                 FinalizarTarea();

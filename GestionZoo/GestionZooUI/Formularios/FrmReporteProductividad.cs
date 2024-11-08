@@ -1,9 +1,7 @@
 ﻿using Business.Services;
-using Models.Classes;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace GestionZooUI.Formularios
@@ -28,31 +26,31 @@ namespace GestionZooUI.Formularios
         {
             dgvReporte.AutoGenerateColumns = false;
 
-            dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
+            _ = dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "Nombre",
                 HeaderText = "Nombre"
             });
 
-            dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
+            _ = dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "Apellido",
                 HeaderText = "Apellido"
             });
 
-            dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
+            _ = dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "Sector",
                 HeaderText = "Sector"
             });
 
-            dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
+            _ = dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "TotalTareas",
                 HeaderText = "Total de Tareas"
             });
 
-            dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
+            _ = dgvReporte.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "TotalTiempo",
                 HeaderText = "Tiempo Total (minutos)"
@@ -63,14 +61,14 @@ namespace GestionZooUI.Formularios
         {
             List<object> reporte = _reporteService.GenerarReporteGeneral();
 
-            if (reporte != null && reporte.Count > 0) 
+            if (reporte != null && reporte.Count > 0)
             {
                 dgvReporte.DataSource = null;
                 dgvReporte.DataSource = reporte;
             }
             else
             {
-                MessageBox.Show("No hay datos para mostrar en el reporte.", "Reporte vacío", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _ = MessageBox.Show("No hay datos para mostrar en el reporte.", "Reporte vacío", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -91,13 +89,13 @@ namespace GestionZooUI.Formularios
 
         private object ObtenerDatosDelDataGridView()
         {
-            var lista = new List<dynamic>();
+            List<dynamic> lista = new List<dynamic>();
 
             foreach (DataGridViewRow fila in dgvReporte.Rows)
             {
                 if (!fila.IsNewRow) // Evita incluir la fila vacía al final del DataGridView
                 {
-                    var objeto = new System.Dynamic.ExpandoObject() as IDictionary<string, Object>;
+                    IDictionary<string, object> objeto = new System.Dynamic.ExpandoObject();
                     foreach (DataGridViewCell celda in fila.Cells)
                     {
                         string nombreColumna = dgvReporte.Columns[celda.ColumnIndex].HeaderText;

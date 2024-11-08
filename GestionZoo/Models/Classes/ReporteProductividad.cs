@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Models.Classes
 {
     public class ReporteProductividad
     {
         private static ReporteProductividad _instancia;
-        private List<Tarea> _tareasRealizadas;
+        private readonly List<Tarea> _tareasRealizadas;
 
         private ReporteProductividad()
         {
@@ -21,7 +19,10 @@ namespace Models.Classes
             get
             {
                 if (_instancia == null)
+                {
                     _instancia = new ReporteProductividad();
+                }
+
                 return _instancia;
             }
         }
@@ -42,9 +43,9 @@ namespace Models.Classes
                 })
                 .Select(g => new
                 {
-                    Nombre = g.Key.Nombre,
-                    Apellido = g.Key.Apellido,
-                    Sector = g.Key.Sector,
+                    g.Key.Nombre,
+                    g.Key.Apellido,
+                    g.Key.Sector,
                     TotalTareas = g.Count(),
                     TotalTiempo = Convert.ToInt32(g.Sum(t => t.Duracion))
                 })

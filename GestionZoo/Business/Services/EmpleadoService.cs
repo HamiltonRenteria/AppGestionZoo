@@ -1,9 +1,6 @@
-﻿using FastMember;
-using Models;
-using Models.Classes;
+﻿using Models.Classes;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace Business.Services
@@ -32,14 +29,14 @@ namespace Business.Services
 
         public bool EliminarEmpleado(int numeroEmpleado)
         {
-            var empleado = _empleados.FirstOrDefault(e => e.NumeroEmpleado == numeroEmpleado);
+            Empleado empleado = _empleados.FirstOrDefault(e => e.NumeroEmpleado == numeroEmpleado);
             if (empleado == null)
             {
                 Console.WriteLine("Error: No se encontró el empleado para eliminar.");
                 return false;
             }
 
-            _empleados.Remove(empleado);
+            _ = _empleados.Remove(empleado);
             Console.WriteLine($"Empleado {empleado.Nombre} {empleado.Apellido} eliminado con éxito.");
             return true;
         }
