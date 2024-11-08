@@ -15,10 +15,6 @@ namespace GestionZooUI.Formularios
             InitializeComponent();
             _reporteService = new ReporteService();
             ConfigurarDataGridView();
-        }
-
-        public void FrmReporteProductividad_Load()
-        {
             GenerarReporte();
         }
 
@@ -115,11 +111,6 @@ namespace GestionZooUI.Formularios
             _ = reportes.Columns.Add("Total Tareas", Type.GetType("System.Int32"));
             _ = reportes.Columns.Add("Tiempo Total (minutos)", Type.GetType("System.Int32"));
             dgvReporte.DataSource = reportes;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GenerarReporte();
         }
     }
 }

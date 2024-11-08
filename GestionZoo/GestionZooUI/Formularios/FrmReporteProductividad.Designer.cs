@@ -30,7 +30,6 @@
         {
             this.btnExportar = new System.Windows.Forms.Button();
             this.dgvReporte = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,22 +53,11 @@
             this.dgvReporte.Size = new System.Drawing.Size(546, 263);
             this.dgvReporte.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cargar Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmReporteProductividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 329);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvReporte);
             this.Controls.Add(this.btnExportar);
             this.Name = "FrmReporteProductividad";
@@ -84,6 +72,5 @@
 
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.DataGridView dgvReporte;
-        private System.Windows.Forms.Button button1;
     }
 }
